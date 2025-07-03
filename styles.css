@@ -1,0 +1,40 @@
+#contest-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#contest-table th,
+#contest-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#contest-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#contest-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#contest-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+#contest-table a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contest-table a:hover {
+  text-decoration: underline;
+}
+
+#contest-table td img {
+  height: 24px;
+  vertical-align: middle;
+}
