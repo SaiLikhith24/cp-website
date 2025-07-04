@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const startTime = getCurrentUTCDateTime();
 
-  const url = `https://clist.by/api/v1/contest/?resource__name__in=leetcode.com,codeforces.com,codechef.com&start__gte=${encodeURIComponent(startTime)}&order_by=start&username=${username}&api_key=${apiKey}`;
+  const url = `https://clist.by/api/v1/contest/?resource__name__in=leetcode.com,codeforces.com,atcoder.jp,codechef.com&start__gte=${encodeURIComponent(startTime)}&order_by=start&username=${username}&api_key=${apiKey}`;
 
 
   fetch(url)
