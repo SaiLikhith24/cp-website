@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const url = 'http://localhost:5000/api/contests';
+  const url = 'https://cp-website.onrender.com/api/contests';
 
   fetch(url)
     .then(response => {
