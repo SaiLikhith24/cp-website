@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: clist-backend
+    runtime: python
+    buildCommand: ""
+    startCommand: python app.py
+    envVars:
+      - key: CLIST_USERNAME
+        value: yourusername
+      - key: CLIST_API_KEY
+        value: yourapikey
