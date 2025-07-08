@@ -1,18 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const username = 'Likhith';         
-  const apiKey = '7083bd249c864807bd56d395d5c47b81eab318c9';            
-
-  function getCurrentUTCDateTime() {
-    const now = new Date();
-    const pad = (n) => String(n).padStart(2, '0');
-
-    return `${now.getUTCFullYear()}-${pad(now.getUTCMonth() + 1)}-${pad(now.getUTCDate())}T${pad(now.getUTCHours())}:${pad(now.getUTCMinutes())}:${pad(now.getUTCSeconds())}`;
-  }
-
-  const startTime = getCurrentUTCDateTime();
-
-  const url = `https://clist.by/api/v1/contest/?resource__name__in=leetcode.com,codeforces.com,atcoder.jp,codechef.com&start__gte=${encodeURIComponent(startTime)}&order_by=start&username=${username}&api_key=${apiKey}`;
-
+  const url = 'http://localhost:5000/api/contests';
 
   fetch(url)
     .then(response => {
@@ -66,7 +53,6 @@ function displayContests(contests) {
 
     const durationHours = (contest.duration / 3600).toFixed(2);
 
-    // Platform info
     let platformName = contest.resource.name;
     let platformIconUrl = `https://clist.by${contest.resource.icon}`;
 
